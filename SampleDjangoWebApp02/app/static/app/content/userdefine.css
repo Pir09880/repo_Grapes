@@ -1,0 +1,59 @@
+.m-form-item-textarea textarea {
+    height: 300px;
+}
+
+.m-form-textarea {
+    display: block;
+    width: 100%;
+    padding: 4px 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    resize: vertical;
+}
+
+    .m-form-textarea:focus {
+        outline: 0;
+        box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+    }
+
+.m-form-submit-button {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+    .m-form-submit-button:hover {
+        background-color: #000;
+    }
+
+    .m-form-submit-button:focus {
+        outline: 0;
+        background-color: #000;
+        border: 2px solid rgb(33, 150, 243);
+    }
+
+.center {
+    text-align: center;
+}
+
+.center_b {
+    border: 1px solid #aaa;
+    width: 200px;
+    height: 100px;
+    background: #AAAAAA;
+    margin: auto;
+}

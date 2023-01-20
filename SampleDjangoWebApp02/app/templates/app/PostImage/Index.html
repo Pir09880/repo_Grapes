@@ -1,0 +1,42 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<h3>{{ message }}</h3>
+
+<form action="{% url 'Commit' %}" method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+    <p>投稿画像: <input type="file" name="file" value="" required></p>
+    {{ form.as_p }}
+
+
+    <p>投稿先:</p>
+    <div class="form-inline" style="display: inline-flex; text-align: right; margin: auto;">
+        <div class="custom-control custom-checkbox">
+            <input class="custom-control-input" type="checkbox" id="custom-check1" name="check[]" value="1">
+            <label for="custom-check1">Instagram　</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input class="custom-control-input" type="checkbox" id="custom-check2" name="check[]" value="2">
+            <label for="custom-check2">Facebook　</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input class="custom-control-input" type="checkbox" id="custom-check3" name="check[]" value="3">
+            <label for="custom-check3">LINE　</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input class="custom-control-input" type="checkbox" id="custom-check4" name="check[]" value="4">
+            <label for="custom-check4">Twitter　</label><br />
+        </div>
+    </div>
+
+    <div class="form-group mr-3">
+        <p>本文:</p>
+        <textarea rows="10" class="form-control" id="maintext" name="maintext"></textarea>
+    </div>
+    <input type="submit" name="submit" value="送信" class="btn btn-primary" style="text-align:right" /><br />
+    {% csrf_token %}
+    <p style="color:red">{{ response }}</p>
+</form>
+
+    {% endblock %}

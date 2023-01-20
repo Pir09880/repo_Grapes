@@ -1,0 +1,2 @@
+C:\Users\Hiroyuki Honda\Desktop\Pirowork\Xedge\SampleDjangoWebApp02\SampleDjangoWebApp02\SampleDjangoWebApp02\obj\Any CPU\Debug\SampleDjangoWebApp02.pyproj.SuggestedBindingRedirects.cache
+C:\Users\Hiroyuki Honda\Desktop\Pirowork\Xedge\SampleDjangoWebApp02\SampleDjangoWebApp02\SampleDjangoWebApp02\obj\Any CPU\Debug\SampleDjangoWebApp02.pyproj.CoreCompileInputs.cache
