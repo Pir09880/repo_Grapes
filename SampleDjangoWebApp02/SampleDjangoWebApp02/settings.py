@@ -117,15 +117,18 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_local')
 MEDIA_URL = '/media/'
 
-#InstagramAPIÉAÉJÉEÉìÉgèÓïÒ
-IS_ACCESS_TOKEN         = 'EAAwdPYqXkMIBAHo5JRZCGTRzbDCQ0qEc0CAJZBrXKPtaHOpLzZAE88dn2dyRO6mcjdEZC234G5WMdYi3DRKZCfcinWTLDP3X3VGxUPGt7bN8ZCeUvXxtLK57hcwDcggrIx6ZBmQyyD0vIrZCATnQslSfrWsBAlSLfZCx8HHfI3EkwowAKSJcE7Ifh'
-IS_APP_ID               = '3409849875927234'
-IS_APP_SECRET           = 'c4a17f95489d797366dd0da404f9d0f2'
+#InstagramAPIÔøΩAÔøΩJÔøΩEÔøΩÔøΩÔøΩgÔøΩÔøΩÔøΩ
+IS_ACCESS_TOKEN         = 'EAANHg91Ki1wBAEA0UnZAQY88ChCbUZCbl4TqXm4rjKXYB3ZAnqFTmlO8WOYGtXafiZADCPGqofLGhsdXizB5OX67Q2k6oqfdGDZB4yxZCnwKkt31novNWRFaNcwJy4aZCaSZCt8BuZCmffneAuivtplU669XiuRcqBuV0zCj09RiZCdQ3ERkKOsKNO'
+IS_APP_ID               = '923056609069916'
+IS_APP_SECRET           = 'bfcdddc91b146fee0473e2fdb2f05356'
 IS_INSTAGRAM_ACCOUNT_ID = "17841456624391358"
 IS_VERSION              = 'v15.0'
 IS_GRAPH_DOMAIN        = 'https://graph.facebook.com/'
 
-#TwitterAPIÉAÉJÉEÉìÉgèÓïÒ
+#FacebookAPIÔøΩAÔøΩJÔøΩEÔøΩÔøΩÔøΩgÔøΩÔøΩÔøΩ
+FB_ACCESS_TOKEN         = 'EAANHg91Ki1wBAL8PnWRYajLNyMCZCOhaD1o2XTuKhBS0COZANo16b2JFZAfbkIatlXfj8Gvt8S7xX9zixHYgFVEouu9n5Fqjp0ZCj41gYbNbV4LTTIVyXUls7vf8b1EsQvaZANTbI8CZCgHUVTTqO70aBVCyZCldCs75ZBxFO2Y4rd01ZAZBrkDZBXYTqFsSaB5o0sZD'
+
+#TwitterAPIÔøΩAÔøΩJÔøΩEÔøΩÔøΩÔøΩgÔøΩÔøΩÔøΩ
 TW_BEARER_TOKEN        = "AAAAAAAAAAAAAAAAAAAAAETpkQEAAAAAW1PfA0QNSH%2BMrRUSPIdq1PnGxfs%3DbRoGBVoIukkcWRrB9hL9DrdncVJPgda0l1xaJIDxBigBEnl1Fl"
 TW_API_KEY             = "NvEJeoArC4QX6Rdpz33hxKaxI"
 TW_API_SECRET          = "uti6LPMNA5ajH3GOd8iTydRs2CaltcFK5eu84EV1bO1rKy5U3W"

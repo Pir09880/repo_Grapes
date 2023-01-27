@@ -14,6 +14,7 @@ from django.conf import settings
 from .forms import UploadForm
 from .models import FileUpload
 import tweepy
+import facebook
 import schedule
 from time import sleep
 from django.views.generic.edit import CreateView
@@ -64,8 +65,9 @@ def Commit(request):
     form = request.POST
 
     # 投稿内容
-    media_url      = r'http://localhost:8000/media/images/kouyou.jpg' 
-    #media_url      = r'https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg'  # 画像
+    #media_url      = r'http://localhost:8000/media/images/kouyou.jpg' 
+    media_url       = r'https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg'  # 画像
+    media_path      = r"C:\Users\Hiroyuki Honda\Desktop\Pirowork\images\kouyou.jpg"
     mime = mimetypes.guess_type(media_url)
     print(mime)
 
@@ -75,12 +77,16 @@ def Commit(request):
     if "1" in check:
         #Instagram
         instagram_upload_image(media_url, media_caption)
+    if "2" in check:
+        #Facebook
+        facebookPost(media_path, media_caption)
     if "3" in check:
         #Line
         postData(media_caption)
     if "4" in check:
         #Twitter
-        tweet(media_caption,"http://localhost:8000/media/images/kouyou.jpg")
+        tweet(media_caption,media_path)
+        #tweet(r'http://localhost:8000/media/images/kouyou.jpg')
 
 
     return render(
@@ -93,6 +99,12 @@ def Commit(request):
             'year':datetime.now().year,
         },
     )
+
+def facebookPost(imgpath,context):
+    graph = facebook.GraphAPI(access_token=getattr(settings, "FB_ACCESS_TOKEN", None), version="2.12")
+    # Upload an image with a caption.
+    graph.put_photo(image=open(imgpath, 'rb'),message=context)
+    #graph.put_object(parent_object='me', connection_name='feed',message=context)
 
 def basic_info_Instagram():
     # 初期
@@ -122,8 +134,6 @@ def InstaApiCall(url, params, request_type):
         # POST
         req = requests.post(url,params)
     else :
- 
- 
         # GET
         req = requests.get(url,params)
     
@@ -232,7 +242,7 @@ def instagram_upload_image(media_url, media_caption):
         # メディアステータス取得
         StatusCode = getMediaStatus(imageMediaId,params)['json_data']['status_code']
         # 待ち時間
-        time.sleep(5)
+        #time.sleep(5)
 
     # Instagramにメディア公開 
     publishImageResponse = publishMedia(imageMediaId,params)
